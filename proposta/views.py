@@ -1,7 +1,10 @@
-from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
 
-# Create your views here.
+from proposta.models import Cliente, Proposta
 
+# Home
 
-
+def home(requests):
+	return render(requests, "home.html")
 

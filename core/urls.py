@@ -5,11 +5,11 @@ from django.views.generic.base import TemplateView
 from django.conf import settings
 
 from django.contrib import admin
-from . import views
+from proposta import views
 
 
 urlpatterns = [
-    path('proposta/<int:id>/', views.proposta),
+    path('', views.home, name='home'),
     path('admin/', admin.site.urls),
 ]
 if settings.DEBUG:
